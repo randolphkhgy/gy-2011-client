@@ -1,8 +1,6 @@
 import serverConfig from '../config/server.config'
 
-let instance : Server | null = null;
-
-class Server {
+export default new class Server {
   readonly baseUrl: string
 
   constructor() {
@@ -22,13 +20,4 @@ class Server {
     path = path.replace(/^\/+/, '');
     return this.baseUrl + path;
   }
-
-  static getInstance(): Server {
-    if (instance === null) {
-      instance = new Server();
-    }
-    return instance;
-  }
 };
-
-export default Server.getInstance();

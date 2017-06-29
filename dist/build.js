@@ -14183,7 +14183,7 @@ if (false) {
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
     state: {
-        message: 'Ha!',
+        message: 'Hello world!',
         lotteries: []
     },
     mutations: {
@@ -14234,8 +14234,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config_server_config__ = __webpack_require__(41);
 
-var instance = null;
-var Server = (function () {
+/* harmony default export */ __webpack_exports__["a"] = (new (function () {
     function Server() {
         this.baseUrl = __WEBPACK_IMPORTED_MODULE_0__config_server_config__["a" /* default */].baseUrl.replace(/\/+$/, '') + '/';
     }
@@ -14251,16 +14250,8 @@ var Server = (function () {
         path = path.replace(/^\/+/, '');
         return this.baseUrl + path;
     };
-    Server.getInstance = function () {
-        if (instance === null) {
-            instance = new Server();
-        }
-        return instance;
-    };
     return Server;
-}());
-;
-/* harmony default export */ __webpack_exports__["a"] = (Server.getInstance());
+}()));
 
 
 /***/ }),
