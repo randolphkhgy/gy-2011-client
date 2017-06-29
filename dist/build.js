@@ -10706,8 +10706,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../css-loader/index.js!../resolve-url-loader/index.js!../sass-loader/lib/loader.js?sourceMap!./lib/bootstrap.styles.loader.js?{\"bootstrapVersion\":3,\"preBootstrapCustomizations\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\pre-customizations.scss\",\"bootstrapCustomizations\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\customizations.scss\",\"appStyles\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\app.scss\",\"useCustomIconFontPath\":false,\"extractStyles\":false,\"styleLoaders\":[\"style-loader\",\"css-loader\",\"sass-loader\"],\"styles\":[\"mixins\",\"normalize\",\"print\",\"glyphicons\",\"scaffolding\",\"type\",\"code\",\"grid\",\"tables\",\"forms\",\"buttons\",\"component-animations\",\"dropdowns\",\"button-groups\",\"input-groups\",\"navs\",\"navbar\",\"breadcrumbs\",\"pagination\",\"pager\",\"labels\",\"badges\",\"jumbotron\",\"thumbnails\",\"alerts\",\"progress-bars\",\"media\",\"list-group\",\"panels\",\"wells\",\"responsive-embed\",\"close\",\"modals\",\"tooltip\",\"popovers\",\"carousel\",\"utilities\",\"responsive-utilities\"],\"scripts\":[\"transition\",\"alert\",\"button\",\"carousel\",\"collapse\",\"dropdown\",\"modal\",\"tooltip\",\"popover\",\"scrollspy\",\"tab\",\"affix\"],\"configFilePath\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\.bootstraprc\",\"bootstrapPath\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\node_modules\\\\bootstrap-sass\",\"bootstrapRelPath\":\"..\\\\bootstrap-sass\"}!./no-op.js", function() {
-			var newContent = require("!!../css-loader/index.js!../resolve-url-loader/index.js!../sass-loader/lib/loader.js?sourceMap!./lib/bootstrap.styles.loader.js?{\"bootstrapVersion\":3,\"preBootstrapCustomizations\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\pre-customizations.scss\",\"bootstrapCustomizations\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\customizations.scss\",\"appStyles\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\app.scss\",\"useCustomIconFontPath\":false,\"extractStyles\":false,\"styleLoaders\":[\"style-loader\",\"css-loader\",\"sass-loader\"],\"styles\":[\"mixins\",\"normalize\",\"print\",\"glyphicons\",\"scaffolding\",\"type\",\"code\",\"grid\",\"tables\",\"forms\",\"buttons\",\"component-animations\",\"dropdowns\",\"button-groups\",\"input-groups\",\"navs\",\"navbar\",\"breadcrumbs\",\"pagination\",\"pager\",\"labels\",\"badges\",\"jumbotron\",\"thumbnails\",\"alerts\",\"progress-bars\",\"media\",\"list-group\",\"panels\",\"wells\",\"responsive-embed\",\"close\",\"modals\",\"tooltip\",\"popovers\",\"carousel\",\"utilities\",\"responsive-utilities\"],\"scripts\":[\"transition\",\"alert\",\"button\",\"carousel\",\"collapse\",\"dropdown\",\"modal\",\"tooltip\",\"popover\",\"scrollspy\",\"tab\",\"affix\"],\"configFilePath\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\.bootstraprc\",\"bootstrapPath\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\node_modules\\\\bootstrap-sass\",\"bootstrapRelPath\":\"..\\\\bootstrap-sass\"}!./no-op.js");
+		module.hot.accept("!!../css-loader/index.js!../resolve-url-loader/index.js!../sass-loader/lib/loader.js?sourceMap!./lib/bootstrap.styles.loader.js?{\"bootstrapVersion\":3,\"preBootstrapCustomizations\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\pre-customizations.scss\",\"bootstrapCustomizations\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\customizations.scss\",\"appStyles\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\app.scss\",\"useCustomIconFontPath\":false,\"extractStyles\":false,\"styleLoaders\":[\"style-loader\",\"css-loader\",\"sass-loader\"],\"styles\":[\"mixins\",\"normalize\",\"print\",\"glyphicons\",\"scaffolding\",\"type\",\"code\",\"grid\",\"tables\",\"forms\",\"buttons\",\"component-animations\",\"dropdowns\",\"button-groups\",\"input-groups\",\"navs\",\"navbar\",\"breadcrumbs\",\"pagination\",\"pager\",\"labels\",\"badges\",\"jumbotron\",\"thumbnails\",\"alerts\",\"progress-bars\",\"media\",\"list-group\",\"panels\",\"wells\",\"responsive-embed\",\"close\",\"modals\",\"tooltip\",\"popovers\",\"carousel\",\"utilities\",\"responsive-utilities\"],\"scripts\":[\"transition\",\"alert\",\"button\",\"carousel\",\"collapse\",\"dropdown\",\"modal\",\"tooltip\",\"popover\",\"scrollspy\",\"tab\",\"affix\"],\"configFilePath\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\.bootstraprc\",\"bootstrapPath\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\node_modules\\\\bootstrap-sass\",\"bootstrapRelPath\":\"..\\\\bootstrap-sass\"}!./no-op.js", function() {
+			var newContent = require("!!../css-loader/index.js!../resolve-url-loader/index.js!../sass-loader/lib/loader.js?sourceMap!./lib/bootstrap.styles.loader.js?{\"bootstrapVersion\":3,\"preBootstrapCustomizations\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\pre-customizations.scss\",\"bootstrapCustomizations\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\customizations.scss\",\"appStyles\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\app.scss\",\"useCustomIconFontPath\":false,\"extractStyles\":false,\"styleLoaders\":[\"style-loader\",\"css-loader\",\"sass-loader\"],\"styles\":[\"mixins\",\"normalize\",\"print\",\"glyphicons\",\"scaffolding\",\"type\",\"code\",\"grid\",\"tables\",\"forms\",\"buttons\",\"component-animations\",\"dropdowns\",\"button-groups\",\"input-groups\",\"navs\",\"navbar\",\"breadcrumbs\",\"pagination\",\"pager\",\"labels\",\"badges\",\"jumbotron\",\"thumbnails\",\"alerts\",\"progress-bars\",\"media\",\"list-group\",\"panels\",\"wells\",\"responsive-embed\",\"close\",\"modals\",\"tooltip\",\"popovers\",\"carousel\",\"utilities\",\"responsive-utilities\"],\"scripts\":[\"transition\",\"alert\",\"button\",\"carousel\",\"collapse\",\"dropdown\",\"modal\",\"tooltip\",\"popover\",\"scrollspy\",\"tab\",\"affix\"],\"configFilePath\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\.bootstraprc\",\"bootstrapPath\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\node_modules\\\\bootstrap-sass\",\"bootstrapRelPath\":\"..\\\\bootstrap-sass\"}!./no-op.js");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -13717,7 +13717,7 @@ var Component = __webpack_require__(35)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\Users\\randolph\\Documents\\Homestead\\sites\\homestead\\gy-2011-client\\src\\components\\App.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\gy-2011-client\\src\\components\\App.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14145,7 +14145,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -14188,6 +14187,11 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
         lotteries: []
     },
     mutations: {
+        /**
+         * 设定彩种列表
+         * @param state
+         * @param lotteries
+         */
         setLotteries: function (state, lotteries) {
             state.lotteries = lotteries;
         }
@@ -14212,13 +14216,60 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Server__ = __webpack_require__(40);
+
 /* harmony default export */ __webpack_exports__["a"] = ({
     index: function () {
-        return jQuery.ajax({
-            url: 'http://gy-2011-server.app/lotteries',
+        return __WEBPACK_IMPORTED_MODULE_0__Server__["a" /* default */].ajax('/lotteries', {
             dataType: 'json'
         });
     }
+});
+
+
+/***/ }),
+/* 40 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config_server_config__ = __webpack_require__(41);
+
+var instance = null;
+var Server = (function () {
+    function Server() {
+        this.baseUrl = __WEBPACK_IMPORTED_MODULE_0__config_server_config__["a" /* default */].baseUrl.replace(/\/+$/, '') + '/';
+    }
+    Server.prototype.ajax = function (path, settings) {
+        if (path === null) {
+            return jQuery.ajax(settings);
+        }
+        else {
+            return jQuery.ajax(this.url(path), settings);
+        }
+    };
+    Server.prototype.url = function (path) {
+        path = path.replace(/^\/+/, '');
+        return this.baseUrl + path;
+    };
+    Server.getInstance = function () {
+        if (instance === null) {
+            instance = new Server();
+        }
+        return instance;
+    };
+    return Server;
+}());
+;
+/* harmony default export */ __webpack_exports__["a"] = (Server.getInstance());
+
+
+/***/ }),
+/* 41 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    baseUrl: "http://gy-2011-server.app"
 });
 
 

@@ -1,9 +1,9 @@
 import Vue from 'vue'
+import Server from './Server'
 
 export default {
   index(): JQueryXHR {
-    return jQuery.ajax({
-      url: 'http://gy-2011-server.app/lotteries',
+    return Server.ajax('/lotteries', {
       dataType: 'json'
     });
   }

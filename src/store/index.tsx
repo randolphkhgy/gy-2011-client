@@ -10,7 +10,12 @@ export default new Vuex.Store({
     lotteries: []
   },
   mutations: {
-    setLotteries(state, lotteries: Array<object>) {
+    /**
+     * 设定彩种列表
+     * @param state 
+     * @param lotteries 
+     */
+    setLotteries(state: any, lotteries: Array<any>) {
       state.lotteries = lotteries;
     }
   },
@@ -18,7 +23,7 @@ export default new Vuex.Store({
     loadLotteries({ commit }) {
       var jqxhr: JQueryXHR = lotteryServ.index();
 
-      jqxhr.then((response) => {
+      jqxhr.then((response: any) => {
         commit("setLotteries", response.data);
       });
 
