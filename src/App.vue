@@ -1,14 +1,18 @@
 <template lang="jade">
-div {{ message }}
+div
+  div {{ message }}
+  ul
+    li(v-for="lottery in lotteries")
+      {{ lottery.cnname }}
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  data () {
-    return {
-      message: 'Hello Vue!'
-    }
-  }
+  computed: mapState([
+    'lotteries', 'message'
+  ])
 }
 </script>
 
