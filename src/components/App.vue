@@ -1,9 +1,8 @@
-<template lang="jade">
+<template lang="pug">
 div
   div {{ message }}
   ul
-    li(v-for="lottery in lotteries")
-      {{ lottery.cnname }}
+    li(v-for="lottery in lotteries") {{ lottery.cnname }}
 </template>
 
 <script>
