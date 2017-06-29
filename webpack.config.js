@@ -7,7 +7,7 @@ module.exports = {
   entry: [
     bootstrapEntryPoints.dev,
     // bootstrapEntryPoints.prod,
-    "./src/app.tsx"
+    "./src/main.tsx"
   ],
   output: {
     filename: "build.js",
