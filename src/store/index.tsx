@@ -1,34 +1,21 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import lotteryServ from '../services/lottery'
+import lottery from './modules/lottery'
+import appAlert from './modules/appAlert'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     message: 'Hello world!',
-    lotteries: []
   },
   mutations: {
-    /**
-     * 设定彩种列表
-     * @param state 
-     * @param lotteries 
-     */
-    setLotteries(state: any, lotteries: Array<any>) {
-      state.lotteries = lotteries;
-    }
   },
   actions: {
-    loadLotteries({ commit }) {
-      var jqxhr: JQueryXHR = lotteryServ.index();
-
-      jqxhr.then((response: any) => {
-        commit("setLotteries", response.data);
-      });
-
-      return jqxhr;
-    }
+  },
+  modules: {
+    lottery,
+    appAlert
   },
 
   // 严格模式，禁止直接修改 state

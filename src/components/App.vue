@@ -1,22 +1,30 @@
 <template lang="pug">
-div
-  div {{ message }}
-  ul
-    li(v-for="lottery in lotteries") {{ lottery.cnname }}
+div.app
+  app-alert
+  app-layout
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import AppAlert from './AppAlert.vue'
+import AppLayout from './AppLayout.vue'
 
 export default {
-  computed: mapState([
-    'lotteries', 'message'
-  ])
+  components: {
+    AppAlert, AppLayout
+  }
 }
 </script>
 
 <style lang="scss">
-#app {
-  background: #ccc;
+.app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
+
+.app-layout { flex: 1; }
 </style>
