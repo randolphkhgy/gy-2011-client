@@ -11000,7 +11000,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
     store: __WEBPACK_IMPORTED_MODULE_2__store_index__["a" /* default */],
     render: function (h) { return h(__WEBPACK_IMPORTED_MODULE_1__components_App_vue___default.a); },
     mounted: function () {
-        this.$store.dispatch("loadLotteries");
+        // this.$store.dispatch("loadLotteries");
+        // this.$store.dispatch('loadShuzi');
+        this.$store.dispatch('loadShuzivn');
     }
 });
 
@@ -11057,13 +11059,26 @@ module.exports = __webpack_require__(19);
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Server__ = __webpack_require__(9);
 
-/* harmony default export */ __webpack_exports__["a"] = ({
-    index: function () {
+/* harmony default export */ __webpack_exports__["a"] = (new (function () {
+    function Lottery() {
+    }
+    Lottery.prototype.index = function () {
         return __WEBPACK_IMPORTED_MODULE_0__Server__["a" /* default */].ajax('/lotteries', {
             dataType: 'json'
         });
-    }
-});
+    };
+    Lottery.prototype.shuzi = function () {
+        return __WEBPACK_IMPORTED_MODULE_0__Server__["a" /* default */].ajax('/lotteries/shuzi', {
+            dataType: 'json'
+        });
+    };
+    Lottery.prototype.shuzivn = function () {
+        return __WEBPACK_IMPORTED_MODULE_0__Server__["a" /* default */].ajax('/lotteries/shuzivn', {
+            dataType: 'json'
+        });
+    };
+    return Lottery;
+}()));
 
 
 /***/ }),
@@ -11163,6 +11178,20 @@ var actions = {
             commit("setLotteries", response.data);
         });
         return jqxhr;
+    },
+    loadShuzi: function (_a) {
+        var commit = _a.commit;
+        var jqxhr = __WEBPACK_IMPORTED_MODULE_0__services_lottery__["a" /* default */].shuzi();
+        jqxhr.then(function (response) {
+            commit("setLotteries", response.data);
+        });
+    },
+    loadShuzivn: function (_a) {
+        var commit = _a.commit;
+        var jqxhr = __WEBPACK_IMPORTED_MODULE_0__services_lottery__["a" /* default */].shuzivn();
+        jqxhr.then(function (response) {
+            commit("setLotteries", response.data);
+        });
     }
 };
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -13870,8 +13899,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../css-loader/index.js!../resolve-url-loader/index.js!../sass-loader/lib/loader.js?sourceMap!./lib/bootstrap.styles.loader.js?{\"bootstrapVersion\":3,\"preBootstrapCustomizations\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\pre-customizations.scss\",\"bootstrapCustomizations\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\customizations.scss\",\"appStyles\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\app.scss\",\"useCustomIconFontPath\":false,\"extractStyles\":false,\"styleLoaders\":[\"style-loader\",\"css-loader\",\"sass-loader\"],\"styles\":[\"mixins\",\"normalize\",\"print\",\"glyphicons\",\"scaffolding\",\"type\",\"code\",\"grid\",\"tables\",\"forms\",\"buttons\",\"component-animations\",\"dropdowns\",\"button-groups\",\"input-groups\",\"navs\",\"navbar\",\"breadcrumbs\",\"pagination\",\"pager\",\"labels\",\"badges\",\"jumbotron\",\"thumbnails\",\"alerts\",\"progress-bars\",\"media\",\"list-group\",\"panels\",\"wells\",\"responsive-embed\",\"close\",\"modals\",\"tooltip\",\"popovers\",\"carousel\",\"utilities\",\"responsive-utilities\"],\"scripts\":[\"transition\",\"alert\",\"button\",\"carousel\",\"collapse\",\"dropdown\",\"modal\",\"tooltip\",\"popover\",\"scrollspy\",\"tab\",\"affix\"],\"configFilePath\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\.bootstraprc\",\"bootstrapPath\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\node_modules\\\\bootstrap-sass\",\"bootstrapRelPath\":\"..\\\\bootstrap-sass\"}!./no-op.js", function() {
-			var newContent = require("!!../css-loader/index.js!../resolve-url-loader/index.js!../sass-loader/lib/loader.js?sourceMap!./lib/bootstrap.styles.loader.js?{\"bootstrapVersion\":3,\"preBootstrapCustomizations\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\pre-customizations.scss\",\"bootstrapCustomizations\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\customizations.scss\",\"appStyles\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\src\\\\styles\\\\app.scss\",\"useCustomIconFontPath\":false,\"extractStyles\":false,\"styleLoaders\":[\"style-loader\",\"css-loader\",\"sass-loader\"],\"styles\":[\"mixins\",\"normalize\",\"print\",\"glyphicons\",\"scaffolding\",\"type\",\"code\",\"grid\",\"tables\",\"forms\",\"buttons\",\"component-animations\",\"dropdowns\",\"button-groups\",\"input-groups\",\"navs\",\"navbar\",\"breadcrumbs\",\"pagination\",\"pager\",\"labels\",\"badges\",\"jumbotron\",\"thumbnails\",\"alerts\",\"progress-bars\",\"media\",\"list-group\",\"panels\",\"wells\",\"responsive-embed\",\"close\",\"modals\",\"tooltip\",\"popovers\",\"carousel\",\"utilities\",\"responsive-utilities\"],\"scripts\":[\"transition\",\"alert\",\"button\",\"carousel\",\"collapse\",\"dropdown\",\"modal\",\"tooltip\",\"popover\",\"scrollspy\",\"tab\",\"affix\"],\"configFilePath\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\.bootstraprc\",\"bootstrapPath\":\"C:\\\\Users\\\\randolph\\\\Documents\\\\Homestead\\\\sites\\\\homestead\\\\gy-2011-client\\\\node_modules\\\\bootstrap-sass\",\"bootstrapRelPath\":\"..\\\\bootstrap-sass\"}!./no-op.js");
+		module.hot.accept("!!../css-loader/index.js!../resolve-url-loader/index.js!../sass-loader/lib/loader.js?sourceMap!./lib/bootstrap.styles.loader.js?{\"bootstrapVersion\":3,\"preBootstrapCustomizations\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\pre-customizations.scss\",\"bootstrapCustomizations\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\customizations.scss\",\"appStyles\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\app.scss\",\"useCustomIconFontPath\":false,\"extractStyles\":false,\"styleLoaders\":[\"style-loader\",\"css-loader\",\"sass-loader\"],\"styles\":[\"mixins\",\"normalize\",\"print\",\"glyphicons\",\"scaffolding\",\"type\",\"code\",\"grid\",\"tables\",\"forms\",\"buttons\",\"component-animations\",\"dropdowns\",\"button-groups\",\"input-groups\",\"navs\",\"navbar\",\"breadcrumbs\",\"pagination\",\"pager\",\"labels\",\"badges\",\"jumbotron\",\"thumbnails\",\"alerts\",\"progress-bars\",\"media\",\"list-group\",\"panels\",\"wells\",\"responsive-embed\",\"close\",\"modals\",\"tooltip\",\"popovers\",\"carousel\",\"utilities\",\"responsive-utilities\"],\"scripts\":[\"transition\",\"alert\",\"button\",\"carousel\",\"collapse\",\"dropdown\",\"modal\",\"tooltip\",\"popover\",\"scrollspy\",\"tab\",\"affix\"],\"configFilePath\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\.bootstraprc\",\"bootstrapPath\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\node_modules\\\\bootstrap-sass\",\"bootstrapRelPath\":\"..\\\\bootstrap-sass\"}!./no-op.js", function() {
+			var newContent = require("!!../css-loader/index.js!../resolve-url-loader/index.js!../sass-loader/lib/loader.js?sourceMap!./lib/bootstrap.styles.loader.js?{\"bootstrapVersion\":3,\"preBootstrapCustomizations\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\pre-customizations.scss\",\"bootstrapCustomizations\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\bootstrap\\\\customizations.scss\",\"appStyles\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\src\\\\styles\\\\app.scss\",\"useCustomIconFontPath\":false,\"extractStyles\":false,\"styleLoaders\":[\"style-loader\",\"css-loader\",\"sass-loader\"],\"styles\":[\"mixins\",\"normalize\",\"print\",\"glyphicons\",\"scaffolding\",\"type\",\"code\",\"grid\",\"tables\",\"forms\",\"buttons\",\"component-animations\",\"dropdowns\",\"button-groups\",\"input-groups\",\"navs\",\"navbar\",\"breadcrumbs\",\"pagination\",\"pager\",\"labels\",\"badges\",\"jumbotron\",\"thumbnails\",\"alerts\",\"progress-bars\",\"media\",\"list-group\",\"panels\",\"wells\",\"responsive-embed\",\"close\",\"modals\",\"tooltip\",\"popovers\",\"carousel\",\"utilities\",\"responsive-utilities\"],\"scripts\":[\"transition\",\"alert\",\"button\",\"carousel\",\"collapse\",\"dropdown\",\"modal\",\"tooltip\",\"popover\",\"scrollspy\",\"tab\",\"affix\"],\"configFilePath\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\.bootstraprc\",\"bootstrapPath\":\"C:\\\\xampp\\\\htdocs\\\\gy-2011-client\\\\node_modules\\\\bootstrap-sass\",\"bootstrapRelPath\":\"..\\\\bootstrap-sass\"}!./no-op.js");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -14367,7 +14396,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\Users\\randolph\\Documents\\Homestead\\sites\\homestead\\gy-2011-client\\src\\components\\App.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\gy-2011-client\\src\\components\\App.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14411,7 +14440,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\Users\\randolph\\Documents\\Homestead\\sites\\homestead\\gy-2011-client\\src\\components\\AppAlert.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\gy-2011-client\\src\\components\\AppAlert.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] AppAlert.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14455,7 +14484,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\Users\\randolph\\Documents\\Homestead\\sites\\homestead\\gy-2011-client\\src\\components\\AppLayout.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\gy-2011-client\\src\\components\\AppLayout.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] AppLayout.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14499,7 +14528,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\Users\\randolph\\Documents\\Homestead\\sites\\homestead\\gy-2011-client\\src\\components\\AppMain.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\gy-2011-client\\src\\components\\AppMain.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] AppMain.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -14543,7 +14572,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\Users\\randolph\\Documents\\Homestead\\sites\\homestead\\gy-2011-client\\src\\components\\LeftColumn.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\gy-2011-client\\src\\components\\LeftColumn.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] LeftColumn.vue: functional components are not supported with templates, they should use render functions.")}
 

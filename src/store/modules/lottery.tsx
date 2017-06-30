@@ -25,6 +25,20 @@ const actions: Vuex.ActionTree<any, any> = {
     });
 
     return jqxhr;
+  },
+  loadShuzi({ commit }) {
+    var jqxhr: JQueryXHR = lotteryServ.shuzi();
+
+    jqxhr.then((response: any) => {
+      commit("setLotteries", response.data);
+    });
+  },
+  loadShuzivn({ commit }) {
+    var jqxhr: JQueryXHR = lotteryServ.shuzivn();
+
+    jqxhr.then((response: any) => {
+      commit("setLotteries", response.data);
+    });
   }
 };
 

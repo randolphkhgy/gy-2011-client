@@ -7,6 +7,8 @@ new Vue({
   store,
   render: h => h(App),
   mounted () {
-    this.$store.dispatch("loadLotteries");
+    // this.$store.dispatch("loadLotteries");
+    // this.$store.dispatch('loadShuzi');
+    this.$store.dispatch('loadShuzivn');
   }
 });
