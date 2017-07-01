@@ -2,19 +2,12 @@
 main.app-main
   div.scroller-wrap
     div.scroller
-      div {{ message }}
-        ul
-          li(v-for="lottery in lotteries") {{ lottery.cnname }}
+      router-view
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
-  computed: mapState({
-    lotteries: state => state.lottery.lotteries,
-    message: 'message'
-  })
+
 }
 </script>
 

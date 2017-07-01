@@ -1,10 +1,10 @@
 <template lang="pug">
-div.app-nav
+nav.app-nav
   ul
     li
-      a(href="#") 时时彩(中国)
+      router-link(:to="{path: '/shuzi'}") 时时彩(中国)
     li
-      a(href="#") 时时彩(越南)
+      router-link(:to="{path: '/shuzivn'}") 时时彩(越南)
 </template>
 
 <script>
@@ -33,6 +33,12 @@ export default {
           color: #fff;
           text-decoration: none;
           background: #3b3d40;
+        }
+
+        &.router-link-active {
+          color: #fff;
+          text-decoration: none;
+          background: #292b2f;
         }
       }
     }
