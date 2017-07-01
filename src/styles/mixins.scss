@@ -1,0 +1,16 @@
+@mixin hide-scrollbar-y($width) {
+  .scroller-wrap {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .scroller {
+    width: $width + 18px;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  
+  .scroller-inner {
+    width: $width;
+  }
+}
