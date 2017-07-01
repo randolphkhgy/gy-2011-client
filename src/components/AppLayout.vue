@@ -19,6 +19,7 @@ export default {
 <style lang="scss">
 .app-layout {
   display: flex;
+  flex: 1;
 }
 
 .app-main { flex: 1; }

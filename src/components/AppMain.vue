@@ -1,20 +1,34 @@
 <template lang="pug">
 main.app-main
-  div.scroller-wrap
-    div.scroller
-      router-view
+  app-title
+  .app-content
+    .scroller-wrap
+      .scroller
+        router-view
 </template>
 
 <script>
-export default {
+import AppTitle from './AppTitle.vue'
 
+export default {
+  components: {
+    AppTitle
+  }
 }
 </script>
 
 
 <style lang="scss">
 .app-main {
+  display: flex;
+  overflow: hidden;
   height: 100%;
+  flex-direction: column;
+
+  .app-content {
+    flex: 1;
+    overflow: hidden;
+  }
 
   .scroller-wrap {
     height: 100%;

@@ -1,15 +1,20 @@
 <template lang="pug">
 div.app
+  page-title(:title="title")
   app-alert
   app-layout
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import PageTitle from './PageTitle.vue'
 import AppAlert from './AppAlert.vue'
 import AppLayout from './AppLayout.vue'
 
 export default {
+  computed: mapState(['title']),
   components: {
+    PageTitle,
     AppAlert, AppLayout
   }
 }
@@ -25,6 +30,4 @@ export default {
   display: flex;
   flex-direction: column;
 }
-
-.app-layout { flex: 1; }
 </style>

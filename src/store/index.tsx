@@ -7,11 +7,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    message: 'Hello world!',
+    title: 'gy-2011-client'
   },
   mutations: {
-  },
-  actions: {
+    changeTitle(state, title: string) {
+      state.title = title;
+    }
   },
   modules: {
     lottery,
