@@ -1,0 +1,36 @@
+@import '../styles/variables.scss';
+
+.app-bar {
+  flex-shrink: 0;
+  height: $app-bar-height;
+  padding: 0 15px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  z-index: $zindex-app-title;
+
+  .title {
+    display: block;
+    line-height: 20px;
+    margin: 0 0 0 -15px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .close {
+    padding: 15px;
+    margin-right: -15px;
+    line-height: 20px;
+  }
+
+  &.app-bar-select {
+    background: #4285f4;
+
+    .title {
+      color: #fff;
+    }
+  }
+}

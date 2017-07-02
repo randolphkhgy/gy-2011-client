@@ -1,17 +1,16 @@
 <template lang="pug">
 div.app-layout
   left-column
-  app-main
+  router-view
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import LeftColumn from './LeftColumn.vue'
-import AppMain from './AppMain.vue'
 
 export default {
   components: {
-    LeftColumn, AppMain
+    LeftColumn
   }
 }
 </script>

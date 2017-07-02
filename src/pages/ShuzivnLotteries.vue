@@ -1,11 +1,13 @@
 <template lang="pug">
-section.shuzi-lotteries
-  div.container
-    lottery-list(:lotteries="lotteries")
+app-main
+  section.shuzi-lotteries
+    div.container
+      lottery-list(:lotteries="lotteries")
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
+import { mapState } from 'vuex'
+import AppMain from '../components/AppMain.vue'
 import LotteryList from '../components/LotteryList.vue'
 
 export default {
@@ -13,6 +15,7 @@ export default {
     lotteries: state => state.lottery.lotteries
   }),
   components: {
+    AppMain,
     LotteryList
   },
   mounted () {

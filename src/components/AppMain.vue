@@ -1,10 +1,12 @@
 <template lang="pug">
-main.app-main
-  app-title
+div.app-main
+  slot(name="app-bar")
+    app-title
   .app-content
     .scroller-wrap
       .scroller
-        router-view
+        main
+          slot
 </template>
 
 <script>
@@ -16,7 +18,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="scss">
 .app-main {

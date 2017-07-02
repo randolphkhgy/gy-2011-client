@@ -1,19 +1,32 @@
 <template lang="pug">
-section.shuzi-lotteries
-  div.container
-    lottery-list(:lotteries="lotteries")
+app-main
+  selection-bar.app-bar-select(slot="app-bar",v-if="selectedItem",:title="selectedItem.cnname")
+  section.shuzi-lotteries
+    div.container
+      lottery-list(:lotteries="lotteries")
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
+import { mapState } from 'vuex'
+import AppMain from '../components/AppMain.vue'
 import LotteryList from '../components/LotteryList.vue'
+import SelectionBar from '../components/SelectionBar.vue'
 
 export default {
   computed: mapState({
-    lotteries: state => state.lottery.lotteries
+    lotteries: state => state.lottery.lotteries,
+    selectedItem: state => {
+      var selectedItems = state.lottery.selected;
+      if (selectedItems.length) {
+        return selectedItems[0];
+      }
+      return null;
+    }
   }),
   components: {
-    LotteryList
+    AppMain,
+    LotteryList,
+    SelectionBar
   },
   mounted () {
     this.$store.commit('changeTitle', '时时彩(中国)');

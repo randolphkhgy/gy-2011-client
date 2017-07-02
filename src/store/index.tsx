@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import mutations from './mutations'
 import lottery from './modules/lottery'
 import appAlert from './modules/appAlert'
 
@@ -9,11 +10,7 @@ export default new Vuex.Store({
   state: {
     title: 'gy-2011-client'
   },
-  mutations: {
-    changeTitle(state, title: string) {
-      state.title = title;
-    }
-  },
+  mutations,
   modules: {
     lottery,
     appAlert
