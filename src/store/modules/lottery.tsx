@@ -2,8 +2,7 @@ import Vuex from 'vuex'
 import lotteryServ from '../../services/lottery'
 
 const state = {
-  lotteries: [],
-  selected: []
+  lotteries: []
 };
 
 const mutations: Vuex.MutationTree<any> = {
@@ -14,10 +13,6 @@ const mutations: Vuex.MutationTree<any> = {
    */
   setLotteries(state: any, lotteries: Array<any>) {
     state.lotteries = lotteries;
-  },
-
-  setSelectedLotteries(state, lotteries) {
-    state.selected = lotteries;
   }
 };
 
