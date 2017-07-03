@@ -49,6 +49,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../styles/variables.scss';
+
 .content {
   padding: 15px 0;
 }
@@ -58,11 +60,16 @@ export default {
   .lottery-item {
     display: flex;
 
+    &.active {
+      background-color: $lottery-list-bg;
+    }
+
     .lottery-title {
       flex: 1;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+
 
       a {
         display: block;
@@ -70,6 +77,13 @@ export default {
         text-overflow: ellipsis;
         margin: -10px -15px;
         padding: 10px 15px;
+        color: inherit;
+        text-decoration: none;
+
+        &:hover, &:focus {
+          color: inherit;
+          text-decoration: none;
+        }
       }
     }
 
@@ -84,7 +98,7 @@ export default {
         display: block;
         margin: -10px -15px;
         padding: 10px 15px;
-        color: #333;
+        color: inherit;
       }
     }
   }
