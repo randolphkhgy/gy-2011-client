@@ -1,18 +1,31 @@
 @import '../styles/variables.scss';
 
 .app-bar {
+  position: relative;
+  display: flex;
   flex-shrink: 0;
   height: $app-bar-height;
   padding: 0 15px;
+  color: #333;
   background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,.26);
   z-index: $zindex-app-title;
+  transition: background-color .2s ease-out;
 
-  .title {
+  .app-bar-icon {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .app-bar-title {
+    flex: 1;
     display: block;
     line-height: 20px;
-    margin: 0 0 0 -15px;
-    padding: 15px;
+    margin: 0;
+    padding: 15px 15px 15px 45px;
     font-size: 18px;
     font-weight: 500;
     overflow: hidden;
@@ -21,16 +34,14 @@
   }
 
   .close {
+    flex-shrink: 0;
     padding: 15px;
     margin-right: -15px;
     line-height: 20px;
   }
 
   &.app-bar-select {
+    color: #fff;
     background: #4285f4;
-
-    .title {
-      color: #fff;
-    }
   }
 }

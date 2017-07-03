@@ -1,16 +1,20 @@
 <template lang="pug">
-div.app-bar.app-title
-  h1.title {{ title }}
+div.selection-bar
+  h1.app-bar-title {{ title }}
 </template>
 
 <script>
 export default {
-  props: ['title']
+  props: ['title'],
+  mounted() {
+
+    setImmediate(() => {
+      $('.app-bar').removeClass('app-bar-init')
+    });
+  }
 }
 </script>
 
 <style lang="scss">
 
 </style>
-
-

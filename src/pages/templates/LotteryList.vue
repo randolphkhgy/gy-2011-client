@@ -1,6 +1,7 @@
 <template lang="pug">
 app-main
-  selection-bar.app-bar-select(slot="app-bar",v-if="selected",:title="selected.cnname")
+  app-title(slot="app-bar",:class="selected ? 'app-bar-select' : 'app-bar-default'")
+    selection-bar(v-if="selected",:title="selected.cnname")
   section.content
     div.container
       div.lottery-list
@@ -20,6 +21,7 @@ app-main
 <script>
 import { mapState } from 'vuex'
 import AppMain from '../../components/AppMain.vue'
+import AppTitle from '../../components/AppTitle.vue'
 import SelectionBar from '../../components/SelectionBar.vue'
 
 export default {
@@ -33,6 +35,7 @@ export default {
   }),
   components: {
     AppMain,
+    AppTitle,
     SelectionBar
   },
   methods: {
@@ -59,8 +62,11 @@ export default {
 
   .lottery-item {
     display: flex;
+    padding: 0;
+    transition: color .2s ease-out, background-color .2s ease-out, border-color .2s ease-out;
 
     &.active {
+      border-color: $lottery-list-bg;
       background-color: $lottery-list-bg;
     }
 
@@ -75,7 +81,6 @@ export default {
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin: -10px -15px;
         padding: 10px 15px;
         color: inherit;
         text-decoration: none;
@@ -96,7 +101,6 @@ export default {
 
       > .dropdown > a {
         display: block;
-        margin: -10px -15px;
         padding: 10px 15px;
         color: inherit;
       }
