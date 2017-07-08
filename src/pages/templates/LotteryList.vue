@@ -2,6 +2,10 @@
 app-main
   app-title(slot="app-bar",:class="selected ? 'app-bar-select' : 'app-bar-default'")
     selection-bar(v-if="selected",:title="selected.cnname")
+      .actions
+        ul
+          li
+            a.app-bar-btn(href="#") 抓号
   section.content
     div.container
       div.lottery-list

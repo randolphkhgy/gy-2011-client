@@ -1,6 +1,7 @@
 <template lang="pug">
 div.selection-bar
   h1.app-bar-title {{ title }}
+  slot
 </template>
 
 <script>
@@ -16,5 +17,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+.selection-bar {
+  flex: 1;
+  display: flex;
+}
 </style>

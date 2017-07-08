@@ -1,5 +1,5 @@
 <template lang="pug">
-div.app-bar(:class="this.class")
+div.app-bar(:class="this.classname")
   slot
     h1.app-bar-title {{ title }}
     button.close(type="button", aria-label="Close")
@@ -11,7 +11,7 @@ import { mapState } from 'vuex'
 
 export default {
   props: {
-    class: {
+    classname: {
       default: 'app-bar-default'
     }
   },
