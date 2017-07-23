@@ -20,4 +20,17 @@ export default new class Lottery {
       dataType: 'json'
     });
   }
+
+  draw(lotteryid:number, date: Date): JQueryXHR {
+    var dd = date.getDate();
+    var mm = date.getMonth()+1;
+    var yyyy = date.getFullYear();
+    var dateString = [yyyy, mm, dd].join('-');
+
+    return Server.ajax('/issue/drawdate', {
+      type: 'POST',
+      dataType: 'json',
+      data: {lotteryid, date: dateString}
+    });
+  }
 }

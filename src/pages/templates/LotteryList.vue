@@ -5,7 +5,7 @@ app-main
       .actions
         ul
           li
-            a.app-bar-btn(href="#") 抓号
+            a.app-bar-btn(href="#",@click="draw(selected, $event)") 抓号
   section.content
     div.container
       div.lottery-list
@@ -19,7 +19,7 @@ app-main
                   span.glyphicon.glyphicon-option-vertical(aria-hidden="true")
                 ul.dropdown-menu
                   li
-                    a(href="#") 抓号
+                    a(href="#",@click="draw(lottery, $event)") 抓号
 </template>
 
 <script>
@@ -27,6 +27,7 @@ import { mapState } from 'vuex'
 import AppMain from '../../components/AppMain.vue'
 import AppTitle from '../../components/AppTitle.vue'
 import SelectionBar from '../../components/SelectionBar.vue'
+import lotteryServ from '../../services/lottery'
 
 export default {
   data() {
@@ -50,6 +51,15 @@ export default {
       } else {
         this.selected = lottery;
       }
+    },
+    draw(lottery, e) {
+      e.preventDefault();
+      var today = new Date();
+      var jqxhr = lotteryServ.draw(lottery.lotteryid, today);
+
+      jqxhr.then((response) => {
+        alert('已抓取 ' + response.count + ' 个期号.');
+      });
     }
   }
 }

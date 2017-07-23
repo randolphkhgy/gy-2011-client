@@ -11218,6 +11218,17 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
             dataType: 'json'
         });
     };
+    Lottery.prototype.draw = function (lotteryid, date) {
+        var dd = date.getDate();
+        var mm = date.getMonth() + 1;
+        var yyyy = date.getFullYear();
+        var dateString = [yyyy, mm, dd].join('-');
+        return __WEBPACK_IMPORTED_MODULE_0__Server__["a" /* default */].ajax('/issue/drawdate', {
+            type: 'POST',
+            dataType: 'json',
+            data: { lotteryid: lotteryid, date: dateString }
+        });
+    };
     return Lottery;
 }()));
 
@@ -11655,6 +11666,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_AppTitle_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_AppTitle_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_SelectionBar_vue__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_SelectionBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_SelectionBar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_lottery__ = __webpack_require__(14);
 //
 //
 //
@@ -11679,6 +11691,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 
@@ -11710,6 +11723,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       } else {
         this.selected = lottery;
       }
+    },
+    draw: function draw(lottery, e) {
+      e.preventDefault();
+      var today = new Date();
+      var jqxhr = __WEBPACK_IMPORTED_MODULE_4__services_lottery__["a" /* default */].draw(lottery.lotteryid, today);
+
+      jqxhr.then(function (response) {
+        alert('已抓取 ' + response.count + ' 个期号.');
+      });
     }
   }
 });
@@ -15865,6 +15887,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "app-bar-btn",
     attrs: {
       "href": "#"
+    },
+    on: {
+      "click": function($event) {
+        _vm.draw(_vm.selected, $event)
+      }
     }
   }, [_vm._v("抓号")])])])])]) : _vm._e()], 1), _c('section', {
     staticClass: "content"
@@ -15913,6 +15940,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('li', [_c('a', {
       attrs: {
         "href": "#"
+      },
+      on: {
+        "click": function($event) {
+          _vm.draw(lottery, $event)
+        }
       }
     }, [_vm._v("抓号")])])])])])])
   }))])])])], 1)
