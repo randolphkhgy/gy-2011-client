@@ -11,8 +11,7 @@ module.exports = {
   ],
   output: {
     filename: "build.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: '/dist/'
+    path: path.resolve(__dirname, "dist")
   },
 
   // Enable sourcemaps for debugging webpack's output.
