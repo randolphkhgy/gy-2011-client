@@ -12,7 +12,7 @@ module.exports = {
   output: {
     filename: "build.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: 'dist',
+    publicPath: '/dist/',
   },
 
   // Enable sourcemaps for debugging webpack's output.
@@ -65,8 +65,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        // NODE_ENV: JSON.stringify('production')
-        NODE_ENV: JSON.stringify('development')
+        NODE_ENV: JSON.stringify('production')
+        // NODE_ENV: JSON.stringify('development')
       }
     }),
     new ExtractTextPlugin("styles.css"),

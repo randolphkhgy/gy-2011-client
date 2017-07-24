@@ -1,6 +1,6 @@
 {
   "name": "gy-2011-client",
-  "version": "0.0.201707244",
+  "version": "0.0.201707245",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
