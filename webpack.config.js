@@ -5,14 +5,14 @@ const bootstrapEntryPoints = require('./webpack.bootstrap.config.js');
 
 module.exports = {
   entry: [
-    bootstrapEntryPoints.dev,
-    // bootstrapEntryPoints.prod,
+    // bootstrapEntryPoints.dev,
+    bootstrapEntryPoints.prod,
     "./src/main.tsx"
   ],
   output: {
     filename: "build.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: path.resolve(__dirname, 'dist'),
+    publicPath: 'dist',
   },
 
   // Enable sourcemaps for debugging webpack's output.
