@@ -4,6 +4,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const bootstrapEntryPoints = require('./webpack.bootstrap.config.js');
 
 module.exports = {
+  target: 'electron-renderer',
   entry: [
     // bootstrapEntryPoints.dev,
     bootstrapEntryPoints.prod,
@@ -11,8 +12,7 @@ module.exports = {
   ],
   output: {
     filename: "build.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, "dist")
   },
 
   // Enable sourcemaps for debugging webpack's output.
