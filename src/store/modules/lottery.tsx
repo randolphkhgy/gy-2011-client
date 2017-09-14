@@ -39,6 +39,13 @@ const actions: Vuex.ActionTree<any, any> = {
     jqxhr.then((response: any) => {
       commit("setLotteries", response.data);
     });
+  },
+  loadElevenFive({ commit }) {
+    var jqxhr: JQueryXHR = lotteryServ.elevenfive();
+
+    jqxhr.then((response: any) => {
+      commit("setLotteries", response.data);
+    });
   }
 };
 

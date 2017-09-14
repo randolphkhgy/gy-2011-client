@@ -16,6 +16,11 @@ export default new VueRouter({
       path: '/shuzivn',
       name: 'shuzivn',
       component: require('./pages/ShuzivnLotteries.vue'),
+    },
+    {
+      path: '/elevenfive',
+      name: 'elevenfive',
+      component: require('./pages/ElevenFiveLotteries.vue'),
     }
   ]
 });

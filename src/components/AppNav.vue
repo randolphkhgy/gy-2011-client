@@ -5,6 +5,8 @@ nav.app-nav
       router-link(:to="{path: '/shuzi'}") 时时彩(中国)
     li
       router-link(:to="{path: '/shuzivn'}") 时时彩(越南)
+    li
+      router-link(:to="{path: '/elevenfive'}") 11选5
 </template>
 
 <script>

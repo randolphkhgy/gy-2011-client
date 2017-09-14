@@ -1,18 +1,17 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const bootstrapEntryPoints = require('./webpack.bootstrap.config.js');
 
 module.exports = {
   target: 'electron-renderer',
   entry: [
-    // bootstrapEntryPoints.dev,
-    bootstrapEntryPoints.prod,
+    bootstrapEntryPoints.dev,
     "./src/main.tsx"
   ],
   output: {
-    filename: "build.js",
-    path: path.resolve(__dirname, "dist")
+    filename: "devbuild.js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: '/dist/'
   },
 
   // Enable sourcemaps for debugging webpack's output.
@@ -65,11 +64,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production')
-        // NODE_ENV: JSON.stringify('development')
+        NODE_ENV: JSON.stringify('development')
       }
     }),
-    new ExtractTextPlugin("styles.css"),
-    // new webpack.optimize.UglifyJsPlugin()
   ]
 };

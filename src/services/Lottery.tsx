@@ -21,6 +21,12 @@ export default new class Lottery {
     });
   }
 
+  elevenfive(): JQueryXHR {
+    return Server.ajax('/lotteries/elevenfive', {
+      dataType: 'json'
+    });
+  }
+
   draw(lotteryid:number, date: Date): JQueryXHR {
     var dd = date.getDate();
     var mm = date.getMonth()+1;
