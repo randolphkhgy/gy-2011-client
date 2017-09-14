@@ -14,6 +14,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
 
+  externals: {
+    window: 'window'
+  },
+
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: [".ts", ".tsx", ".js", ".json"],

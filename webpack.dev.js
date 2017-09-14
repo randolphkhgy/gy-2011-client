@@ -14,6 +14,12 @@ module.exports = {
     publicPath: '/dist/'
   },
 
+  externals: {
+    window: 'window',
+    gy2011clientConfig: 'gy2011clientConfig',
+    'window.gy2011clientConfig': 'gy2011clientConfig'
+  },
+
   // Enable sourcemaps for debugging webpack's output.
   devtool: "source-map",
 

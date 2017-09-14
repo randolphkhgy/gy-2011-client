@@ -1,3 +1,7 @@
+var window = require("window");
+
+var config = window.gy2011clientConfig || {};
+
 export default {
-  baseUrl: "http://gy-2011-server.app"
+  baseUrl: config.baseUrl || "http://gy-2011-server.app"
 }
