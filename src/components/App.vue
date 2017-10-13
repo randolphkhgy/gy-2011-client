@@ -3,6 +3,7 @@ div.app
   page-title(:title="title")
   app-alert
   app-layout
+  network-loading
 </template>
 
 <script>
@@ -10,12 +11,15 @@ import { mapState } from 'vuex'
 import PageTitle from './PageTitle.vue'
 import AppAlert from './AppAlert.vue'
 import AppLayout from './AppLayout.vue'
+import NetworkLoading from './NetworkLoading.vue'
 
 export default {
   computed: mapState(['title']),
   components: {
     PageTitle,
-    AppAlert, AppLayout
+    AppAlert,
+    AppLayout,
+    NetworkLoading
   }
 }
 </script>

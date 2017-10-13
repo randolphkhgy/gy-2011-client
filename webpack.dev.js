@@ -73,5 +73,9 @@ module.exports = {
         NODE_ENV: JSON.stringify('development')
       }
     }),
-  ]
+  ],
+
+  node: {
+    setImmediate: true
+  }
 };

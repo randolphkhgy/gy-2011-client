@@ -17,33 +17,45 @@ const mutations: Vuex.MutationTree<any> = {
 };
 
 const actions: Vuex.ActionTree<any, any> = {
-  loadLotteries({ commit }) {
+  loadLotteries({ commit, dispatch }) {
     var jqxhr: JQueryXHR = lotteryServ.index();
 
+    dispatch("startLoading");
+
     jqxhr.then((response: any) => {
+      dispatch("stopLoading");
       commit("setLotteries", response.data);
     });
 
     return jqxhr;
   },
-  loadShuzi({ commit }) {
+  loadShuzi({ commit, dispatch }) {
     var jqxhr: JQueryXHR = lotteryServ.shuzi();
 
+    dispatch("startLoading");
+
     jqxhr.then((response: any) => {
+      dispatch("stopLoading");
       commit("setLotteries", response.data);
     });
   },
-  loadShuzivn({ commit }) {
+  loadShuzivn({ commit, dispatch }) {
     var jqxhr: JQueryXHR = lotteryServ.shuzivn();
 
+    dispatch("startLoading");
+
     jqxhr.then((response: any) => {
+      dispatch("stopLoading");
       commit("setLotteries", response.data);
     });
   },
-  loadElevenFive({ commit }) {
+  loadElevenFive({ commit, dispatch }) {
     var jqxhr: JQueryXHR = lotteryServ.elevenfive();
 
+    dispatch("startLoading");
+
     jqxhr.then((response: any) => {
+      dispatch("stopLoading");
       commit("setLotteries", response.data);
     });
   }

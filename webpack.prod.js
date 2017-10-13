@@ -73,5 +73,9 @@ module.exports = {
         minimize: true
     }),
     new webpack.optimize.UglifyJsPlugin()
-  ]
+  ],
+
+  node: {
+    setImmediate: true
+  }
 };

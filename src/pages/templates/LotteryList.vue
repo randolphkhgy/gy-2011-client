@@ -57,7 +57,10 @@ export default {
       var today = new Date();
       var jqxhr = lotteryServ.draw(lottery.lotteryid, today);
 
+      this.$store.dispatch("startLoading");
+
       jqxhr.then((response) => {
+        this.$store.dispatch("stopLoading");
         alert('已抓取 ' + response.count + ' 个期号.');
       });
     }
